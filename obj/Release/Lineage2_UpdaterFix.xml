@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Lineage2_UpdaterFix
+</name>
+</assembly>
+<members>
+<member name="P:Lineage2_UpdaterFix.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Lineage2_UpdaterFix.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Lineage2_UpdaterFix.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Lineage2_UpdaterFix.Form1.isValid(System.String@)">
+	<summary>
+     Check, if given path is valid (file or folder exists)
+ </summary>
+	<param name="path">Path to file or folder</param>
+	<returns>True if path is valid, False otherwise</returns>
+	<remarks></remarks>
+</member><member name="M:Lineage2_UpdaterFix.Form1.checkConfiguration(System.String@,System.String@,System.String@,System.String@)">
+	<summary>
+     Checks if programm have saved configuration.
+     If have, then do validation of all paths, if any path is incorrect, then shows error message
+ </summary>
+	<param name="l2_path">Path to Lineage II Folder</param>
+	<param name="l2_source">Name of Lineage II new files folder</param>
+	<param name="l2_target">Name of Lineage II originals files folder</param>
+	<param name="l2_executable">Name of executable file, for run Lineage II game</param>
+	<remarks></remarks>
+</member><member name="M:Lineage2_UpdaterFix.Form1.loadConfiguration">
+	<summary>
+     Loads saved configuration if it exists
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Lineage2_UpdaterFix.Form1.saveConfiguration(System.String@,System.String@,System.String@,System.String@)">
+	<summary>
+     Save configuration to registry in Lineage2ChatFix sub key
+ </summary>
+	<param name="l2_path"></param>
+	<param name="l2_source"></param>
+	<param name="l2_target"></param>
+	<param name="l2_executable"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
