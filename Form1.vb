@@ -32,6 +32,10 @@
         lineage_source = textbox_l2source.Text
         lineage_target = textbox_l2target.Text
 
+        If (Not saveConfiguration(lineage_folder, lineage_source, lineage_target, lineage_execut)) Then
+            Return
+        End If
+
         Dim l2_process As Process
         Try
 
