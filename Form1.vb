@@ -55,10 +55,8 @@
     ''' <returns>True if path is valid, False otherwise</returns>
     ''' <remarks></remarks>
     Function isValid(ByRef path As String)
-        If (Not System.IO.Directory.Exists(path)) Then
-            If (Not System.IO.File.Exists(path)) Then
-                Return False
-            End If
+        If (Not System.IO.Directory.Exists(path) And Not System.IO.File.Exists(path)) Then
+            Return False
         End If
         Return True
     End Function
@@ -91,8 +89,6 @@
     ''' <remarks></remarks>
     Private Sub loadConfiguration()
         Try
-
-            My.Computer.Registry.CurrentUser.CreateSubKey("Lineage2ChatFix")
             lineage_folder = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Lineage2ChatFix", "LineagePath", "C:\lineage")
             lineage_source = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Lineage2ChatFix", "LineageSource", "!chat")
             lineage_target = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Lineage2ChatFix", "LineageTarget", "evilblades")
